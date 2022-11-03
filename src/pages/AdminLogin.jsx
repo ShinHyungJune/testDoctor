@@ -57,11 +57,11 @@ const Login = ({login, history}) => {
 
 							<button className="m-btn type01 width-100">로그인</button>
 
-							<div className="mt-16"></div>
+							{/*<div className="mt-16"></div>
 
 							<div className="utils">
 								<Link to="/register" className="util">회원가입</Link>
-							</div>
+							</div>*/}
 						</form>
 				</div>
 			</div>

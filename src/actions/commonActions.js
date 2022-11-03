@@ -2,11 +2,18 @@ import axios from 'axios';
 
 export const login = (user, token, onLogin) => {
 	return (dispatch) => {
-		
+
 		// 토큰 설정
 		dispatch({
 			type: "SET_TOKEN",
 			payload: token
+		});
+
+		dispatch({
+			type: "SET_USER",
+			payload: {
+				...user,
+			}
 		});
 
 		localStorage.setItem("token", JSON.stringify(token));
