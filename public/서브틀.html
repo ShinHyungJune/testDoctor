@@ -1,0 +1,275 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>HISMS</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no, email=no, address=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/aos-2.3.1.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/module.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/jquery-1.12.4.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/aos-2.3.1.js"></script>
+    <script src="js/common.js"></script>
+</head>
+<style>
+
+</style>
+<body>
+
+<div id="app">
+    <!-- 헤더 -->
+    <header class="header">
+        <div class="black"></div>
+
+        <div class="wrap">
+            <a href="#" class="logo">
+                <img src="img/logo.png" alt="">
+            </a>
+
+            <div class="right">
+                <nav class="navs">
+                    <div class="nav">
+                        <a href="#" class="text">문자발송</a>
+                    </div>
+
+                    <div class="nav">
+                        <a href="#" class="text">주소록</a>
+                    </div>
+
+                    <div class="nav">
+                        <a href="#" class="text">전송내역</a>
+                    </div>
+
+                    <div class="nav">
+                        <a href="#" class="text">결제관리</a>
+                    </div>
+
+                    <div class="nav">
+                        <a href="#" class="text">마이페이지</a>
+                    </div>
+
+                    <div class="nav">
+                        <a href="#" class="text">공지사항</a>
+                    </div>
+                </nav>
+
+                <!-- 로그인 전 -->
+                <div class="utils">
+                    <a href="#" class="util point">회원가입</a>
+                    <a href="#" class="util">
+                        <img src="../img/user.png" alt="">
+                        로그인
+                    </a>
+                </div>
+
+                <!-- 로그인 후 -->
+                <!--
+                <div class="utils">
+                    <a href="#" class="util point">충전하기</a>
+                    <a href="#" class="util" style="padding-right:0;">잔액 : 0원</a>
+                    <a href="#" class="util">
+                        <img src="../img/user.png" alt="">
+                        로그아웃
+                    </a>
+                </div>
+                -->
+            </div>
+
+            <button class="btn-menu"></button>
+        </div>
+
+    </header>
+
+    <div class="main">
+        <div class="sub-wrap">
+            <div class="wrap">
+                <h3 class="title"><img src="../img/message.png" alt="">회원관리</h3>
+
+                <div class="tabs">
+                    <a href="#" class="tab active">
+                    <span class="text">
+                        로그인
+                        <img src="../img/triangle.png" alt="">
+                    </span>
+                    </a>
+                    <a href="#" class="tab">
+                    <span class="text">
+                        회원가입
+                        <img src="../img/triangle.png" alt="">
+                    </span>
+                    </a>
+                    <a href="#" class="tab">
+                    <span class="text">
+                        아이디/비밀번호찾기
+                        <img src="../img/triangle.png" alt="">
+                    </span>
+                    </a>
+                    <a href="#" class="tab">
+                    <span class="text">
+                        서비스 제약관
+                        <img src="../img/triangle.png" alt="">
+                    </span>
+                    </a>
+                </div>
+
+                <p class="subtitle">로그인</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 문자아울렛 -->
+    <div class="box-letter-wrap">
+        <div class="wrap">
+            <div class="box-letter">
+                <div class="box-title">HISMS 문자아울렛</div>
+                <div class="box-body">
+                    <div class="infos">
+                        <div class="info">
+                            <div class="info-title">광고문자</div>
+                            <div class="info-body">
+                                <p class="text">단문*장문</p>
+                                <p class="text">이미지문자</p>
+                                <p class="text">머지전송</p>
+                            </div>
+                        </div>
+
+                        <div class="info">
+                            <div class="info-title">개인주소록</div>
+                            <div class="info-body">
+                                <p class="text">주소록</p>
+                                <p class="text">수신거부</p>
+                                <p class="text">080수신거부목록</p>
+                            </div>
+                        </div>
+
+                        <div class="info">
+                            <div class="info-title">전송내역</div>
+                            <div class="info-body">
+                                <p class="text">전송결과</p>
+                                <p class="text">예약전송</p>
+                                <p class="text">전송통계</p>
+                            </div>
+                        </div>
+
+                        <div class="info">
+                            <div class="info-title">결제관리</div>
+                            <div class="info-body">
+                                <p class="text">문자단가</p>
+                                <p class="text">충전내역</p>
+                                <p class="text">발송(금액차감)내역</p>
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="info">
+                            <div class="info-title">마이페이지</div>
+                            <div class="info-body">
+                                <p class="text">내정보변경</p>
+                                <p class="text">패스워드변경</p>
+                                <p class="text">발신번호추가/삭제</p>
+                                <p class="text">회원탈퇴</p>
+                            </div>
+                        </div>
+
+                        <div class="info">
+                            <div class="info-title">메뉴얼안내</div>
+                            <div class="info-body">
+                                <p class="text">일반문자</p>
+                                <p class="text">광고문자</p>
+                                <p class="text">개인주소록</p>
+                                <p class="text">전송내역</p>
+                                <p class="text">결제관리</p>
+                                <p class="text">마이페이지</p>
+                            </div>
+                        </div>
+
+                        <div class="info">
+                            <div class="info-title">회원관리</div>
+                            <div class="info-body">
+                                <p class="text">회원가입</p>
+                                <p class="text">아이디 / 비밀번호찾기</p>
+                                <p class="text">서비스 약관관리</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 푸터 -->
+    <footer class="footer">
+        <div class="wrap">
+            <div class="box-infos">
+                <img src="../img/logo-footer.png" alt="" class="logo">
+
+                <div class="links">
+                    <a href="#" class="link">홈으로</a>
+                    <a href="#" class="link">메뉴얼안내</a>
+                    <a href="#" class="link">개인정보취급방침</a>
+                    <a href="#" class="link">서비스 이용약관</a>
+                </div>
+
+                <div class="infos">
+                    <p class="info">
+                        HISMS 문자아울렛 김한솔  / 사업자등록번호: 521-39-00865  / 통신판매업신고번호: 제2022-경남김해-0087호
+                        <br/>경상남도 김해시 인제로 262, 3층 303호  / 전화: 010-8936-4613 이메일: buddy0223@naver.com
+                    </p>
+                </div>
+
+                <p class="copyright">© 2022 문자아울렛 All rights reserved. Made with of JaehyeonIT.</p>
+            </div>
+
+            <div class="utils">
+                <a href="tel:1580-0000" target="_blank" class="util">
+                    <img src="../img/contact.png" alt="" class="deco">
+                    <img src="../img/circlePhone.png" alt="" class="img">
+                </a>
+                <a href="#" target="_blank" class="util">
+                    <img src="../img/circleKakao.png" alt="" class="img">
+                </a>
+            </div>
+        </div>
+
+    </footer>
+</div>
+<script>
+    new Swiper('.section01 .swiper .swiper-container', {
+        autoplay: {
+            delay: 5000,
+        },
+        loop: true,
+        spaceBetween: 30,
+        slidesPerView: 3,
+        pagination: {
+            el: '.section01 .swiper .swiper-pagination',
+            clickable: true
+        },
+        navigation: {
+            nextEl: '.section01 .swiper .swiper-btn-next',
+            prevEl: '.section01 .swiper .swiper-btn-prev',
+        },
+        breakpoints: {
+            1200: {
+                slidesPerView: 2,
+            },
+            768: {
+                slidesPerView: 1,
+            }
+        }
+    });
+</script>
+</body>
+</html>

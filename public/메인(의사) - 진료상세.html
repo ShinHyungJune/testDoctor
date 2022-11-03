@@ -1,0 +1,275 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>메인(의사) - 진료상세</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no, email=no, address=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- 캘린더 -->
+    <link rel="stylesheet" href="css/datepicker.css">
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/aos-2.3.1.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/module.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+
+    <!-- 캘린더 -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.2/main.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.2/locales-all.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.2/locales-all.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.2/main.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.0/moment.min.js"></script>
+
+    <script src="js/jquery-1.12.4.js"></script>
+    <script src="js/datepicker.min.js"></script>
+    <script src="js/datepicker.ko.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/aos-2.3.1.js"></script>
+    <script src="js/common.js"></script>
+</head>
+<style>
+
+</style>
+<body>
+
+<div id="app">
+    <!-- 헤더 -->
+    <header class="header">
+        <div class="wrap">
+            <a href="#" class="logo">
+                <img src="img/logo.png" alt="">
+            </a>
+
+            <div class="right">
+                <nav class="navs">
+                    <div class="nav">
+                        <a href="#" class="text">공지사항</a>
+                    </div>
+
+                    <div class="nav">
+                        <a href="#" class="text">마이페이지</a>
+                    </div>
+
+                    <div class="nav point">
+                        <a href="#" class="text">로그인</a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="main">
+
+        <div class="reservations-index">
+            <div class="container">
+                <div class="sidebar">
+                    <div class="top">
+                        <div class="m-ratioBox-wrap">
+                            <div class="m-ratioBox">
+                                <img src="img/doctor.png" alt="">
+                            </div>
+                        </div>
+
+                        <div class="content">
+                            <h3 class="title">김땡땡 의사</h3>
+                            <p class="body">헬로닥터 병원</p>
+                        </div>
+                    </div>
+
+                    <div class="states">
+                        <div class="state-wrap">
+                            <div class="state">
+                                <h3 class="title">진료 상태</h3>
+                                
+                                <div class="m-input-select type02">
+                                    <div class="option value primary">즉시 <img src="./img/arrowDown-gray.png" alt=""></div>
+
+                                    <div class="options">
+                                        <div class="option primary">즉시</div>
+                                        <div class="option alert">대기</div>
+                                        <div class="option">식사</div>
+                                        <div class="option disable">금일 진료 종료</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="state-wrap">
+                            <div class="state">
+                                <h3 class="title">화상 진료</h3>
+
+                                <div class="m-input-select type02">
+                                    <div class="option value primary">활성화 <img src="./img/arrowDown-gray.png" alt=""></div>
+
+                                    <div class="options">
+                                        <div class="option primary">활성화</div>
+                                        <div class="option disable">비활성화</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box-time">
+                        <div class="box-title">
+                            <h3 class="title">진료시간</h3>
+
+                            <button class="m-btn type03">수정하기</button>
+                        </div>
+
+                        <div class="times-wrap">
+                            <img src="./img/time.png" alt="">
+
+                            <div class="times">
+                                <div class="time"><span class="date">월</span>11:00~19:00</div>
+                                <div class="time"><span class="date">화</span>11:00~19:00</div>
+                                <div class="time"><span class="date">수</span>11:00~19:00</div>
+                                <div class="time"><span class="date">목</span>11:00~19:00</div>
+                                <div class="time"><span class="date">금</span>11:00~19:00</div>
+                                <div class="time"><span class="date">토</span>11:00~19:00</div>
+                                <div class="time"><span class="date">일</span>11:00~19:00</div>
+                                <div class="time">10/10 공휴일 휴무</div>
+                            </div>
+                        </div>
+                
+                    </div>
+                </div>
+
+
+                <div class="container-inner">
+                    <div class="container-top">
+                        <button type="button" class="btn-back">
+                            <img src="./img/arrowBack.png" alt="">
+                            돌아가기
+                        </button>
+                    </div>
+
+                    <div class="m-title type02">
+                        총 진료 건수
+
+                        <div class="m-input-date type02">
+                            <button class="btn-arrow">
+                                <img src="./img/arrowLeft-black.png" alt="" />
+                            </button>
+
+                            <span class="text">2022.09.26</span>
+
+                            <button class="btn-arrow">
+                                <img src="./img/arrowLeft-black.png" alt="" style="transform: rotate(180deg)" />
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="mt-20"></div>
+
+                    <div class="m-table type01">
+                        <div class="thead">
+                            <div class="tr">
+                                <div class="th">이름</div>
+                                <div class="th">주민등록번호</div>
+                                <div class="th">전화번호</div>
+                                <div class="th">접수일</div>
+                                <div class="th">상태</div>
+                                <div class="th">처방전</div>
+                            </div>
+                        </div>
+                        <div class="tbody">
+                            <div class="tr">
+                                <div class="td">김소민</div>
+                                <div class="td">990101-2******</div>
+                                <div class="td">010-1234-1234</div>
+                                <div class="td">2022.09.26</div>
+                                <div class="td">
+                                    <div class="m-state type01 state01">처방전 미발행</div>
+                                </div>
+                                <div class="td">
+                                    <a href="#">처방전 입력</a>
+                                </div>
+                            </div>
+
+                            <div class="tr">
+                                <div class="td">김소민</div>
+                                <div class="td">990101-2******</div>
+                                <div class="td">010-1234-1234</div>
+                                <div class="td">2022.09.26</div>
+                                <div class="td">
+                                    <div class="m-state type01 state02">처방전 발행 완료</div>
+                                </div>
+                                <div class="td">
+                                    <a href="#">처방전 보기</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 푸터 -->
+    <footer class="footer">
+        <div class="wrap">
+           <div class="infos">
+               <div class="info point">DR.LINK</div>
+               <div class="info">© 2022 DR.LINK, Inc.</div>
+               <div class="info">서울특별시 강남구 테헤란로 1234-12</div>
+           </div>
+        </div>
+
+    </footer>
+</div>
+<script>
+    $('#datepicker').datepicker({
+        onSelect: function (dateText, inst) {
+            alert(123);
+            /*if(inst){
+                self.setDateEl(inst);
+
+                self.getSchedules(inst);
+            }*/
+        },
+        onRenderCell: function (date, cellType) {
+            let formatDate = date.getFullYear() + "-" + (date.getMonth() < 10 ? "0" + (date.getMonth() + 1) : date.getMonth() + 1) + "-" + (date.getDate() < 10 ? "0" + date.getDate() : date.getDate());
+
+            let events = [];
+
+            /*self.monthSchedules.data.map(schedule => {
+                if(formatDate >= schedule.started_at && formatDate <= schedule.finished_at)
+                    events.push(formatDate);
+            });*/
+
+            let dps = "";
+
+            let count = 20;
+
+            /*events.map(event => {
+                dps += '<div class="dp-note"></div>'
+            });
+            */
+            var currentDate = date.getDate();
+
+            if (cellType == 'day') {
+                if(count > 0 )
+                    return {
+                        html: currentDate + '<div class="dp-notes">' + count + '</div>'
+                    }
+
+                return {
+                    html: currentDate
+                }
+            }
+        },
+        onChangeMonth: function(month, year){
+            // self.getMonthSchedules(month + 1,year);
+        },
+    });
+</script>
+</body>
+</html>

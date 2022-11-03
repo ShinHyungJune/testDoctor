@@ -1,0 +1,573 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>메인(의사)</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no, email=no, address=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- 캘린더 -->
+    <link rel="stylesheet" href="css/datepicker.css">
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/aos-2.3.1.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/module.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+
+    <!-- 캘린더 -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.2/main.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.2/locales-all.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.2/locales-all.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.2/main.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.0/moment.min.js"></script>
+
+    <script src="js/jquery-1.12.4.js"></script>
+    <script src="js/datepicker.min.js"></script>
+    <script src="js/datepicker.ko.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/aos-2.3.1.js"></script>
+    <script src="js/common.js"></script>
+</head>
+<style>
+
+</style>
+<body>
+
+<div id="app">
+    <!-- 헤더 -->
+    <header class="header">
+        <div class="wrap">
+            <a href="#" class="logo">
+                <img src="img/logo.png" alt="">
+            </a>
+
+            <div class="right">
+                <nav class="navs">
+                    <div class="nav">
+                        <a href="#" class="text">공지사항</a>
+                    </div>
+
+                    <div class="nav">
+                        <a href="#" class="text">마이페이지</a>
+                    </div>
+
+                    <div class="nav point">
+                        <a href="#" class="text">로그인</a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="main">
+
+        <div class="area-main">
+            <div class="container">
+                <div class="sidebar">
+                    <div class="top">
+                        <div class="m-ratioBox-wrap">
+                            <div class="m-ratioBox">
+                                <img src="img/doctor.png" alt="">
+                            </div>
+                        </div>
+
+                        <div class="content">
+                            <h3 class="title">김땡땡 의사</h3>
+                            <p class="body">헬로닥터 병원</p>
+                        </div>
+                    </div>
+
+                    <div class="states">
+                        <div class="state-wrap">
+                            <div class="state">
+                                <h3 class="title">진료 상태</h3>
+                                
+                                <div class="m-input-select type02">
+                                    <div class="option value primary">즉시 <img src="./img/arrowDown-gray.png" alt=""></div>
+
+                                    <div class="options">
+                                        <div class="option primary">즉시</div>
+                                        <div class="option alert">대기</div>
+                                        <div class="option">식사</div>
+                                        <div class="option disable">금일 진료 종료</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="state-wrap">
+                            <div class="state">
+                                <h3 class="title">화상 진료</h3>
+
+                                <div class="m-input-select type02">
+                                    <div class="option value primary">활성화 <img src="./img/arrowDown-gray.png" alt=""></div>
+
+                                    <div class="options">
+                                        <div class="option primary">활성화</div>
+                                        <div class="option disable">비활성화</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box-time">
+                        <div class="box-title">
+                            <h3 class="title">진료시간</h3>
+
+                            <button class="m-btn type03">수정하기</button>
+                        </div>
+
+                        <div class="times-wrap">
+                            <img src="./img/time.png" alt="">
+
+                            <div class="times">
+                                <div class="time"><span class="date">월</span>11:00~19:00</div>
+                                <div class="time"><span class="date">화</span>11:00~19:00</div>
+                                <div class="time"><span class="date">수</span>11:00~19:00</div>
+                                <div class="time"><span class="date">목</span>11:00~19:00</div>
+                                <div class="time"><span class="date">금</span>11:00~19:00</div>
+                                <div class="time"><span class="date">토</span>11:00~19:00</div>
+                                <div class="time"><span class="date">일</span>11:00~19:00</div>
+                                <div class="time">10/10 공휴일 휴무</div>
+                            </div>
+                        </div>
+                
+                    </div>
+                </div>
+
+                <div class="container-inner">
+                    <div class="m-boxes type01">
+                        <div class="box-wrap">
+                            <div class="box state01">
+                                <div class="box-title">
+                                    <h3 class="title">날짜</h3>
+                                    <button class="m-btn type03">달력 보기</button>
+                                </div>
+
+                                <div class="content">
+                                    <h3 class="title">2022.09.26 (월)</h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box-wrap">
+                            <div class="box state02">
+                                <div class="box-title">
+                                    <h3 class="title">현재 진료 중인 환자</h3>
+                                </div>
+
+                                <div class="content">
+                                    <h3 class="title">
+                                        김소민
+                                        <span class="state">처방전 미발행</span>
+                                    </h3>
+
+                                    <a href="#" class="btn-more">
+                                        <img src="./img/arrowRight-gray.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box-wrap">
+                            <div class="box">
+                                <div class="box-title">
+                                    <h3 class="title">총 진료 건수</h3>
+                                </div>
+
+                                <div class="content">
+                                    <h3 class="title">
+                                        <span class="point">15</span>
+                                        <span class="sub">건</span>
+                                    </h3>
+
+                                    <a href="#" class="btn-more">
+                                        <img src="./img/arrowRight-gray.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box-wrap">
+                            <div class="box">
+                                <div class="box-title">
+                                    <h3 class="title">총 대기 건수</h3>
+
+                                    <div class="m-input-checkbox type03">
+                                        <span class="text">대기 받기</span>
+                                        <input type="checkbox" id="test">
+                                        <label for="test"></label>
+                                    </div>
+                                </div>
+
+                                <div class="content">
+                                    <h3 class="title">
+                                        <span class="point">5</span>
+                                        <span class="sub">명</span>
+                                    </h3>
+
+                                    <a href="#" class="btn-more">
+                                        <img src="./img/arrowRight-gray.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-60"></div>
+
+                    <div class="m-title type02">환자 대기 목록</div>
+
+                    <div class="mt-20"></div>
+
+                    <div class="m-table type01">
+                        <div class="thead">
+                            <div class="tr">
+                                <div class="th">이름</div>
+                                <div class="th">주민등록번호</div>
+                                <div class="th">전화번호</div>
+                                <div class="th">접수일</div>
+                                <div class="th">증상</div>
+                                <div class="th">비고</div>
+                            </div>
+                        </div>
+                        <div class="tbody">
+                            <div class="tr">
+                                <div class="td">김소민</div>
+                                <div class="td">990101-2******</div>
+                                <div class="td">010-1234-1234</div>
+                                <div class="td">2022.09.26</div>
+                                <div class="td">감기 기운이 있고 머리가 아파요</div>
+                                <div class="td">화상 진료 접수</div>
+                            </div>
+                            <div class="box-more">
+                                <div class="fragments">
+                                    <div class="fragment-wrap">
+                                        <div class="fragment box-info">
+                                            <h3 class="title">김소민</h3>
+
+                                            <div class="boxes">
+                                                <div class="box-wrap">
+                                                    <div class="box">
+                                                        <div class="info">
+                                                            <h3 class="info-title">주민번호</h3>
+                                                            <p class="info-body">990101-2*****</p>
+                                                        </div>
+
+                                                        <div class="info">
+                                                            <h3 class="info-title">전화번호</h3>
+                                                            <p class="info-body">010-1234-1223</p>
+                                                        </div>
+
+                                                        <div class="info">
+                                                            <h3 class="info-title">접수일</h3>
+                                                            <p class="info-body">2022.02.23</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="box-wrap">
+                                                    <div class="box">
+                                                        <div class="info">
+                                                            <h3 class="info-title">증상</h3>
+                                                            <p class="info-body">감기 기운이 있고 머리가 아파요. 미열도 있는 것 같아요.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="fragment-wrap">
+                                        <div class="fragment box-imgs">
+                                            <div class="m-ratioBox-wrap">
+                                                <div class="m-ratioBox">
+                                                    <img src="./img/picture.png" alt="">
+                                                </div>
+                                            </div>
+
+                                            <div class="m-ratioBox-wrap">
+                                                <div class="m-ratioBox">
+                                                    <img src="./img/picture.png" alt="">
+                                                </div>
+                                            </div>
+
+                                            <div class="m-ratioBox-wrap">
+                                                <div class="m-ratioBox">
+                                                    <img src="./img/picture.png" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="fragment-wrap">
+                                        <div class="fragment box-btns">
+                                            <button class="m-btn type02">진료 승인</button>
+                                            <br/><button class="m-btn type02 bg-gray">진료 취소</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tr">
+                                <div class="td">김소민</div>
+                                <div class="td">990101-2******</div>
+                                <div class="td">010-1234-1234</div>
+                                <div class="td">2022.09.26</div>
+                                <div class="td">감기 기운이 있고 머리가 아파요</div>
+                                <div class="td">화상 진료 접수</div>
+                            </div>
+                            <div class="tr">
+                                <div class="td">김소민</div>
+                                <div class="td">990101-2******</div>
+                                <div class="td">010-1234-1234</div>
+                                <div class="td">2022.09.26</div>
+                                <div class="td">감기 기운이 있고 머리가 아파요</div>
+                                <div class="td">화상 진료 접수</div>
+                            </div>
+                            <div class="tr">
+                                <div class="td">김소민</div>
+                                <div class="td">990101-2******</div>
+                                <div class="td">010-1234-1234</div>
+                                <div class="td">2022.09.26</div>
+                                <div class="td">감기 기운이 있고 머리가 아파요</div>
+                                <div class="td">화상 진료 접수</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 진료시간 모달 -->
+            <div class="m-pop m-pop-schedule type02">
+                <div class="m-pop-inner">
+                    <div class="content">
+                        <div class="fragment">
+                            <h3 class="title">정기 휴무 선택</h3>
+                            <div class="m-input-checkboxes">
+                                <div class="m-input-checkbox type01">
+                                    <input type="radio" />
+                                    <label for="test">
+                                        <div class="circle">
+                                            <img src="img/check-white.png" alt=""/>
+                                        </div>
+
+                                        <span class="text">월</span>
+                                    </label>
+                                </div>
+
+                                <div class="m-input-checkbox type01">
+                                    <input type="radio" />
+                                    <label for="test">
+                                        <div class="circle">
+                                            <img src="img/check-white.png" alt=""/>
+                                        </div>
+
+                                        <span class="text">화</span>
+                                    </label>
+                                </div>
+
+                                <div class="m-input-checkbox type01">
+                                    <input type="radio" />
+                                    <label for="test">
+                                        <div class="circle">
+                                            <img src="img/check-white.png" alt=""/>
+                                        </div>
+
+                                        <span class="text">수</span>
+                                    </label>
+                                </div>
+
+                                <div class="m-input-checkbox type01">
+                                    <input type="radio" />
+                                    <label for="test">
+                                        <div class="circle">
+                                            <img src="img/check-white.png" alt=""/>
+                                        </div>
+
+                                        <span class="text">목</span>
+                                    </label>
+                                </div>
+
+                                <div class="m-input-checkbox type01">
+                                    <input type="radio" />
+                                    <label for="test">
+                                        <div class="circle">
+                                            <img src="img/check-white.png" alt=""/>
+                                        </div>
+
+                                        <span class="text">금</span>
+                                    </label>
+                                </div>
+
+                                <div class="m-input-checkbox type01">
+                                    <input type="radio" />
+                                    <label for="test">
+                                        <div class="circle">
+                                            <img src="img/check-white.png" alt=""/>
+                                        </div>
+
+                                        <span class="text">토</span>
+                                    </label>
+                                </div>
+
+                                <div class="m-input-checkbox type01">
+                                    <input type="radio">
+                                    <label for="test">
+                                        <div class="circle">
+                                            <img src="img/check-white.png" alt=""/>
+                                        </div>
+
+                                        <span class="text">일</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-24"></div>
+
+                        <div class="fragment">
+                            <h3 class="title">진료 시간 입력</h3>
+
+                            <div class="m-input-wrap">
+                                <h3 class="title">월</h3>
+                                <div class="inputs">
+                                    <div class="m-input-text type01">
+                                        <input type="text" />
+                                    </div>
+                                    <span class="deco">~</span>
+                                    <div class="m-input-text type01">
+                                        <input type="text" />
+                                    </div>
+
+                                    <div class="m-input-checkbox type01">
+                                        <input type="checkbox" id="all" />
+                                        <label for="all">
+                                            <div class="circle">
+                                                <img src="img/check-white.png" alt=""/>
+                                            </div>
+
+                                            <span class="text">모두 적용</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="m-input-wrap">
+                                <h3 class="title">화</h3>
+                                <div class="inputs">
+                                    <div class="m-input-text type01">
+                                        <input type="text">
+                                    </div>
+                                    <span class="deco">~</span>
+                                    <div class="m-input-text type01">
+                                        <input type="text">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="m-input-wrap">
+                                <h3 class="title">수</h3>
+                                <div class="inputs">
+                                    정기 휴무
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="mt-24"></div>
+
+                        <div class="fragment">
+                            <h3 class="title">추가 입력</h3>
+
+                            <div class="m-input-wrap">
+                                <div class="m-input-text type01" style="flex:auto;">
+                                    <input type="text" style="width:100%;" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-20"></div>
+
+                        <div class="btns">
+                            <button class="m-btn type02 bg-lightGray">닫기</button>
+                            <button class="m-btn type02">저장하기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 달력 팝업 -->
+            <div class="m-pop m-pop-calendar type02">
+                <div class="m-pop-inner">
+                    <div class="content">
+                        <div id="datepicker" class="datepicker-here" data-language='ko'></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 푸터 -->
+    <footer class="footer">
+        <div class="wrap">
+           <div class="infos">
+               <div class="info point">DR.LINK</div>
+               <div class="info">© 2022 DR.LINK, Inc.</div>
+               <div class="info">서울특별시 강남구 테헤란로 1234-12</div>
+           </div>
+        </div>
+
+    </footer>
+</div>
+<script>
+    $('#datepicker').datepicker({
+        onSelect: function (dateText, inst) {
+            alert(123);
+            /*if(inst){
+                self.setDateEl(inst);
+
+                self.getSchedules(inst);
+            }*/
+        },
+        onRenderCell: function (date, cellType) {
+            let formatDate = date.getFullYear() + "-" + (date.getMonth() < 10 ? "0" + (date.getMonth() + 1) : date.getMonth() + 1) + "-" + (date.getDate() < 10 ? "0" + date.getDate() : date.getDate());
+
+            let events = [];
+
+            /*self.monthSchedules.data.map(schedule => {
+                if(formatDate >= schedule.started_at && formatDate <= schedule.finished_at)
+                    events.push(formatDate);
+            });*/
+
+            let dps = "";
+
+            let count = 20;
+
+            /*events.map(event => {
+                dps += '<div class="dp-note"></div>'
+            });
+            */
+            var currentDate = date.getDate();
+
+            if (cellType == 'day') {
+                if(count > 0 )
+                    return {
+                        html: currentDate + '<div class="dp-notes">' + count + '</div>'
+                    }
+
+                return {
+                    html: currentDate
+                }
+            }
+        },
+        onChangeMonth: function(month, year){
+            // self.getMonthSchedules(month + 1,year);
+        },
+    });
+</script>
+</body>
+</html>

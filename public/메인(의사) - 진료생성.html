@@ -1,0 +1,369 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>메인(의사) - 진료생성</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no, email=no, address=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- 캘린더 -->
+    <link rel="stylesheet" href="css/datepicker.css">
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/aos-2.3.1.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/module.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+
+    <!-- 캘린더 -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.2/main.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.2/locales-all.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.2/locales-all.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.2/main.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.0/moment.min.js"></script>
+
+    <script src="js/jquery-1.12.4.js"></script>
+    <script src="js/datepicker.min.js"></script>
+    <script src="js/datepicker.ko.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/aos-2.3.1.js"></script>
+    <script src="js/common.js"></script>
+</head>
+<style>
+
+</style>
+<body>
+
+<div id="app">
+    <!-- 헤더 -->
+    <header class="header">
+        <div class="wrap">
+            <a href="#" class="logo">
+                <img src="img/logo.png" alt="">
+            </a>
+
+            <div class="right">
+                <nav class="navs">
+                    <div class="nav">
+                        <a href="#" class="text">공지사항</a>
+                    </div>
+
+                    <div class="nav">
+                        <a href="#" class="text">마이페이지</a>
+                    </div>
+
+                    <div class="nav point">
+                        <a href="#" class="text">로그인</a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="main">
+
+        <div class="reservations-create">
+            <div class="container">
+                <div class="container-inner">
+                    <div class="container-left">
+                        <div class="fragment">
+                            <div class="m-title type02">
+                                환자 기본 정보
+                            </div>
+
+                            <div class="mt-20"></div>
+
+                            <div class="m-boxes type02">
+                                <div class="m-box box-info">
+                                    <h3 class="title">김소민</h3>
+
+                                    <div class="infos">
+                                        <div class="info">
+                                            <p class="info-title">주민번호</p>
+                                            <p class="info-body">9990101-2******</p>
+                                        </div>
+
+                                        <div class="info">
+                                            <p class="info-title">전화번호</p>
+                                            <p class="info-body">010-1234-1234</p>
+                                        </div>
+
+                                        <div class="info">
+                                            <p class="info-title">접수일</p>
+                                            <p class="info-body">2022.09.26</p>
+                                        </div>
+
+                                        <div class="mt-10"></div>
+                                        <div class="info">
+                                            <p class="info-title">비고</p>
+                                            <p class="info-body">화상 진료 접수</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-28"></div>
+
+                        <div class="fragment">
+                            <div class="m-title type02">
+                                증상
+                            </div>
+
+                            <div class="mt-20"></div>
+
+                            <div class="m-boxes type02">
+                                <div class="m-box box-answer">
+                                    <pre>감기 기운이 있고 머리가 아파요.
+                                미열도 있는 것 같아요.</pre>
+
+                                    <div class="imgs">
+                                        <div class="m-ratioBox-wrap">
+                                            <div class="m-ratioBox">
+                                                <img src="./img/picture.png" alt="">
+                                            </div>
+                                        </div>
+
+                                        <div class="m-ratioBox-wrap">
+                                            <div class="m-ratioBox">
+                                                <img src="./img/picture.png" alt="">
+                                            </div>
+                                        </div>
+
+                                        <div class="m-ratioBox-wrap">
+                                            <div class="m-ratioBox">
+                                                <img src="./img/picture.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-24"></div>
+
+                        <div class="fragment">
+                            <div class="m-input-textarea type01">
+                                <textarea name="" id="" placeholder="증상을 입력해 주세요."></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container-right">
+                        <div class="fragment">
+                            <div class="m-title type02">
+                                진료
+                            </div>
+
+                            <div class="mt-20"></div>
+
+                            <div class="m-table type01 m-table01">
+                                <div class="thead">
+                                    <div class="tr">
+                                        <div class="th">코드</div>
+                                        <div class="th">진단명</div>
+                                        <div class="th">진료 내용</div>
+                                    </div>
+                                </div>
+                                <div class="tbody">
+                                    <div class="tr">
+                                        <div class="td">
+                                            <div class="m-input-text type01">
+                                                <input type="text" placeholder="코드">
+                                            </div>
+                                        </div>
+                                        <div class="td">
+                                            <div class="m-input-text type01">
+                                                <input type="text" placeholder="진단명">
+                                            </div>
+                                        </div>
+                                        <div class="td">
+                                            <div class="m-input-text type01">
+                                                <input type="text" placeholder="진료내용">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="tr">
+                                        <div class="td">
+                                            <div class="m-input-text type01">
+                                                <input type="text" placeholder="코드">
+                                            </div>
+                                        </div>
+                                        <div class="td">
+                                            <div class="m-input-text type01">
+                                                <input type="text" placeholder="진단명">
+                                            </div>
+                                        </div>
+                                        <div class="td">
+                                            <div class="m-input-text type01">
+                                                <input type="text" placeholder="진료내용">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="mt-20"></div>
+
+                                    <div class="btns" style="display:flex; justify-content: center;">
+                                        <div class="m-btn type02" style="min-width:150px; text-align: center">추가</div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="fragment">
+                            <div class="m-title type02">
+                                약 처방
+                            </div>
+
+                            <div class="mt-20"></div>
+
+                            <div class="m-table type01 m-table02">
+                                <div class="thead">
+                                    <div class="tr">
+                                        <div class="th">처방 코드</div>
+                                        <div class="th">처방명</div>
+                                        <div class="th">1회량</div>
+                                        <div class="th">횟수</div>
+                                        <div class="th">일수</div>
+                                        <div class="th">용법</div>
+                                    </div>
+                                </div>
+                                <div class="tbody">
+                                    <div class="tr">
+                                        <div class="td">
+                                            <div class="m-input-text type01">
+                                                <input type="text" placeholder="코드">
+                                            </div>
+                                        </div>
+                                        <div class="td">
+                                            <div class="m-input-text type01">
+                                                <input type="text" placeholder="처방명">
+                                            </div>
+                                        </div>
+                                        <div class="td">
+                                            <div class="m-input-text type01">
+                                                <input type="text" placeholder="1회량">
+                                            </div>
+                                        </div>
+                                        <div class="td">
+                                            <div class="m-input-text type01">
+                                                <input type="text" placeholder="횟수">
+                                            </div>
+                                        </div>
+                                        <div class="td">
+                                            <div class="m-input-text type01">
+                                                <input type="text" placeholder="일수">
+                                            </div>
+                                        </div>
+                                        <div class="td">
+                                            <div class="m-input-text type01">
+                                                <input type="text" placeholder="용법">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="mt-20"></div>
+
+                                    <div class="btns" style="display:flex; justify-content: center;">
+                                        <div class="m-btn type02" style="min-width:150px; text-align: center">추가</div>
+                                    </div>
+
+                                    <div class="mt-40"></div>
+
+                                    <div class="m-input-textarea type01">
+                                        <textarea name="" id="" placeholder="메모를 입력해 주세요."></textarea>
+                                    </div>
+
+                                    <div class="mt-20"></div>
+
+                                    <div class="box-price">
+                                        <div class="left">
+                                            <h3 class="title">진료비 입력</h3>
+
+                                            <div class="box">
+                                                <div class="m-input-text type01">
+                                                    <input type="number" placeholder="0">
+                                                </div>
+                                                원
+                                            </div>
+                                        </div>
+
+                                        <button class="m-btn type02 bg-lightGray">처방전 전송</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 푸터 -->
+    <footer class="footer">
+        <div class="wrap">
+           <div class="infos">
+               <div class="info point">DR.LINK</div>
+               <div class="info">© 2022 DR.LINK, Inc.</div>
+               <div class="info">서울특별시 강남구 테헤란로 1234-12</div>
+           </div>
+        </div>
+
+    </footer>
+</div>
+<script>
+    $('#datepicker').datepicker({
+        onSelect: function (dateText, inst) {
+            alert(123);
+            /*if(inst){
+                self.setDateEl(inst);
+
+                self.getSchedules(inst);
+            }*/
+        },
+        onRenderCell: function (date, cellType) {
+            let formatDate = date.getFullYear() + "-" + (date.getMonth() < 10 ? "0" + (date.getMonth() + 1) : date.getMonth() + 1) + "-" + (date.getDate() < 10 ? "0" + date.getDate() : date.getDate());
+
+            let events = [];
+
+            /*self.monthSchedules.data.map(schedule => {
+                if(formatDate >= schedule.started_at && formatDate <= schedule.finished_at)
+                    events.push(formatDate);
+            });*/
+
+            let dps = "";
+
+            let count = 20;
+
+            /*events.map(event => {
+                dps += '<div class="dp-note"></div>'
+            });
+            */
+            var currentDate = date.getDate();
+
+            if (cellType == 'day') {
+                if(count > 0 )
+                    return {
+                        html: currentDate + '<div class="dp-notes">' + count + '</div>'
+                    }
+
+                return {
+                    html: currentDate
+                }
+            }
+        },
+        onChangeMonth: function(month, year){
+            // self.getMonthSchedules(month + 1,year);
+        },
+    });
+</script>
+</body>
+</html>

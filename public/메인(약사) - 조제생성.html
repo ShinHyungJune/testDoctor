@@ -1,0 +1,266 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>메인(약사) - 조제생성</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no, email=no, address=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- 캘린더 -->
+    <link rel="stylesheet" href="css/datepicker.css">
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/aos-2.3.1.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/module.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+
+    <!-- 캘린더 -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.2/main.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.2/locales-all.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.2/locales-all.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.2/main.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.0/moment.min.js"></script>
+
+    <script src="js/jquery-1.12.4.js"></script>
+    <script src="js/pdfobject.js"></script>
+    <script src="js/datepicker.min.js"></script>
+    <script src="js/datepicker.ko.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/aos-2.3.1.js"></script>
+    <script src="js/common.js"></script>
+</head>
+<style>
+
+</style>
+<body>
+
+<div id="app">
+    <!-- 헤더 -->
+    <header class="header">
+        <div class="wrap">
+            <a href="#" class="logo">
+                <img src="img/logo.png" alt="">
+            </a>
+
+            <div class="right">
+                <nav class="navs">
+                    <div class="nav">
+                        <a href="#" class="text">공지사항</a>
+                    </div>
+
+                    <div class="nav">
+                        <a href="#" class="text">마이페이지</a>
+                    </div>
+
+                    <div class="nav point">
+                        <a href="#" class="text">로그인</a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="main">
+
+        <div class="reservations-create descriptions-create">
+            <div class="container">
+                <div class="container-inner">
+                    <div class="section-wrap section-wrap01">
+                        <div class="section">
+                            <div class="fragment">
+                                <div class="m-title type02">
+                                    환자 처방 정보
+                                </div>
+
+                                <div class="mt-20"></div>
+
+                                <div id="pdf"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section-wrap">
+                        <div class="section">
+                            <div class="fragment">
+                                <div class="m-title type02">
+                                    환자 기본 정보
+                                </div>
+
+                                <div class="mt-20"></div>
+
+                                <div class="m-boxes type02">
+                                    <div class="m-box box-info">
+                                        <h3 class="title">김소민</h3>
+
+                                        <div class="infos">
+                                            <div class="info">
+                                                <p class="info-title">주민번호</p>
+                                                <p class="info-body">9990101-2******</p>
+                                            </div>
+
+                                            <div class="info">
+                                                <p class="info-title">전화번호</p>
+                                                <p class="info-body">010-1234-1234</p>
+                                            </div>
+
+                                            <div class="info">
+                                                <p class="info-title">접수일</p>
+                                                <p class="info-body">2022.09.26</p>
+                                            </div>
+
+                                            <div class="mt-10"></div>
+                                            <div class="info">
+                                                <p class="info-title">비고</p>
+                                                <p class="info-body">화상 진료 접수</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-28"></div>
+
+                            <div class="fragment">
+                                <div class="m-title type02">
+                                    증상
+                                </div>
+
+                                <div class="mt-20"></div>
+
+                                <div class="m-boxes type02">
+                                    <div class="m-box box-answer">
+                                    <pre>감기 기운이 있고 머리가 아파요.
+                                미열도 있는 것 같아요.</pre>
+
+                                        <div class="imgs">
+                                            <div class="m-ratioBox-wrap">
+                                                <div class="m-ratioBox">
+                                                    <img src="./img/picture.png" alt="">
+                                                </div>
+                                            </div>
+
+                                            <div class="m-ratioBox-wrap">
+                                                <div class="m-ratioBox">
+                                                    <img src="./img/picture.png" alt="">
+                                                </div>
+                                            </div>
+
+                                            <div class="m-ratioBox-wrap">
+                                                <div class="m-ratioBox">
+                                                    <img src="./img/picture.png" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-24"></div>
+
+                            <div class="fragment">
+                                <div class="m-input-textarea type01">
+                                    <textarea name="" id="" placeholder="메모"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section-wrap section-wrap03">
+                        <div class="section">
+                            <div class="fragment">
+                                <div class="m-title type02">
+                                    약 수령 방법
+                                </div>
+
+                                <div class="mt-20"></div>
+
+                                <div class="m-boxes type02">
+                                    <div class="m-box box-info">
+                                        <h3 class="title">택배</h3>
+
+                                        <div class="infos">
+                                            <div class="info" style="width:100%;">
+                                                <p class="info-body">경기도 화성시 통탄첨담산업1로 27길</p>
+                                            </div>
+
+                                            <div class="info" style="width:100%;">
+                                                <p class="info-body">상세주소가 들어갑니다.</p>
+                                            </div>
+
+                                            <div class="info" style="width:100%;">
+                                                <p class="info-title">공동현관</p>
+                                                <p class="info-body">#1234#1234#</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-28"></div>
+
+                            <div class="fragment fragment02">
+                                <div class="m-title type02" style="color:#fff;">
+                                    임시제목
+                                </div>
+
+                                <div class="mt-20"></div>
+
+                                <div class="comments">
+                                    <p class="comment">
+                                        모든 환자는 동일성분 다른 약 조제에 동의하였습니다.
+                                    </p>
+                                    <p class="comment">
+                                        만약, 다른 약으로 변경하시는 경우에는 환자에게 정확한 설명을 부탁 드립니다.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="mt-24"></div>
+
+                            <div class="fragment">
+                                <div class="box-price">
+                                    <div class="left">
+                                        <h3 class="title">조제비 입력</h3>
+
+                                        <div class="box">
+                                            <div class="m-input-text type01">
+                                                <input type="number" placeholder="0">
+                                            </div>
+                                            원
+                                        </div>
+                                    </div>
+
+                                    <button class="m-btn type02 bg-primary">조제완료</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 푸터 -->
+    <footer class="footer">
+        <div class="wrap">
+           <div class="infos">
+               <div class="info point">DR.LINK</div>
+               <div class="info">© 2022 DR.LINK, Inc.</div>
+               <div class="info">서울특별시 강남구 테헤란로 1234-12</div>
+           </div>
+        </div>
+
+    </footer>
+</div>
+<script>
+    PDFObject.embed("./file/example.pdf", "#pdf");
+</script>
+</body>
+</html>
