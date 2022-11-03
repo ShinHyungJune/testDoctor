@@ -7,12 +7,9 @@ import InputSelect from './inputs/InputSelect';
 import InputTextarea from './inputs/InputTextarea';
 import InputFile from './inputs/InputFile';
 import InputImage from './inputs/InputImage';
-import InputCropImage from './inputs/InputCropImage';
-import InputCodeEditor from './inputs/InputCodeEditor';
-import InputTags from "./inputs/InputTags";
-import InputAvatar from "./inputs/InputAvatar";
 import InputRadio from "./inputs/InputRadio";
 import InputAddress from "./inputs/InputAddress";
+import axios from 'axios';
 
 const Form = ({children, url = "", method = "", onSubmit = () => {}, onThen = (response) => {}, onCatch = (error) => {}, defaultForm = null, setFlash, enterSubmitDisabled = false}) => {
     let [form, setForm] = useState({
@@ -140,18 +137,10 @@ const Form = ({children, url = "", method = "", onSubmit = () => {}, onThen = (r
                     {/* input radio */}
                     {el.type === "input" && el.props.type === "radio" ? <InputRadio form={form} setForm={setForm} el={el}/> : null}
                 
-                    {/* input tags */}
-                    {el.type === "input" && el.props.type === "tags" ? <InputTags form={form} setForm={setForm} el={el}/> : null}
-                
-                    {/* input avatar */}
-                    {el.props.type === "avatar" ? <InputAvatar form={form} setForm={setForm} el={el}/> : null}
-                
+
                     {/* input img */}
                     {el.props.type === "img" ? <InputImage form={form} setForm={setForm} el={el}/> : null}
     
-                    {/* input img */}
-                    {el.props.type === "cropImage" ? <InputCropImage form={form} setForm={setForm} el={el}/> : null}
-                
                     {/* input file */}
                     {el.props.type === "file" ? <InputFile form={form} setForm={setForm} el={el}/> : null}
 
@@ -160,10 +149,7 @@ const Form = ({children, url = "", method = "", onSubmit = () => {}, onThen = (r
                 
                     {/* select */}
                     {el.type === "select" ? <InputSelect form={form} setForm={setForm} el={el}/> : null}
-                
-                    {/* codeEditor */}
-                    {el.props.type === "codeEditor" ? <InputCodeEditor defaultForm={defaultForm} form={form} setForm={setForm} el={el}/> : null}
-    
+
                     {React.createElement('p', {className: "input--error"}, form.errors ? form.errors[el.props.name] : null)}
                 </div>
             ) : el.props.type === "submit" ? React.cloneElement(el, {onClick: submit}) : (el)

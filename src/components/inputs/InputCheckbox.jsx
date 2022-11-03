@@ -3,6 +3,8 @@ import React, {Fragment} from 'react';
 const InputCheckbox = ({form, setForm, el}) => {
     
     const changeForm = (event) => {
+        console.log(form);
+
         if(!form[event.target.name])
             form[event.target.name] = [];
    

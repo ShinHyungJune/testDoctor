@@ -20,7 +20,7 @@ const Header = ({location, user, token, logout, ...rest}) => {
                         <img src="/img/logo.png" alt=""/>
                     </Link>
 
-                    <div className="right">
+                    {/*<div className="right">
                         <nav className="navs">
                             {
                                 user ? (
@@ -47,7 +47,7 @@ const Header = ({location, user, token, logout, ...rest}) => {
                                 )
                             }
                         </nav>
-                    </div>
+                    </div>*/}
                 </div>
             </div>
     );

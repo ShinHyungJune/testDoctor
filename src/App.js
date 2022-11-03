@@ -11,6 +11,7 @@ import AdminLogin from "./pages/AdminLogin";
 import NoticesIndex from "./pages/NoticesIndex";
 import DoctorAuthRoute from "./components/DoctorAuthRoute";
 import AdminAuthRoute from "./components/AdminAuthRoute";
+import Flash from "./components/Flash";
 
 window.store = store;
 
@@ -18,6 +19,7 @@ const App = () => {
 
 	return (
 		<Provider store={store}>
+			<Flash />
 
 			<BrowserRouter>
 				<Header />

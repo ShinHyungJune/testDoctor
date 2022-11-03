@@ -1,5 +1,6 @@
 import React, {Component, useState} from 'react';
-import Pop from '../../common/Pop';
+import Pop from '../Pop';
+import axios from 'axios';
 
 const FindAddress = ({setForm, form, name}) => {
 	let [word, setWord] = useState("");

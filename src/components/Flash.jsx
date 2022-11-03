@@ -32,7 +32,7 @@ const Flash = ({flash, setFlash}) => {
 
 const mapState = (state) => {
     return {
-        flash: state.commonStates.flash
+        flash: state.common.flash
     };
 };
 

@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import axios from "axios";
 import {connect} from "react-redux";
 import {login} from "../actions/commonActions";
+import Form from "../components/Form";
 
 const DoctorRegister = ({login, history}) => {
 	let [form, setForm] = useState({
@@ -14,7 +15,7 @@ const DoctorRegister = ({login, history}) => {
 	});
 
 	const changeForm = (event) => {
-		console.log(form);
+		return alert(event.target.type);
 		setForm({
 			...form,
 			[event.target.name] : event.target.value
@@ -31,7 +32,6 @@ const DoctorRegister = ({login, history}) => {
 	};
 
 	const agreeAll = () => {
-		console.log(form);
 		setForm({
 			...form,
 			agree1: true,
@@ -40,13 +40,18 @@ const DoctorRegister = ({login, history}) => {
 		});
 	}
 
+	const register = () => {
+
+	};
+
 	const onLogin = () => {
 		history.push("/");
 	};
 
 	return (
 			<div className="area-register">
-				<form action="">
+				<form onSubmit={register}>
+
 					<div className="boxes">
 						<div className="box-wrap">
 							<div className="box box01">
@@ -64,7 +69,7 @@ const DoctorRegister = ({login, history}) => {
 									<div className="mt-28"></div>
 
 									<div className="m-input-checkbox type01">
-										<input type="checkbox" id="agree1" name="agree1" onChange={changeForm} checked={form.agree1 ? true : false}/>
+										<input type="checkbox" id="agree1" name="agree1" />
 											<label htmlFor="agree1">
 												<div className="circle">
 													<img src="/img/check-white.png" alt="" />
@@ -81,7 +86,7 @@ const DoctorRegister = ({login, history}) => {
 									<div className="mt-24"></div>
 
 									<div className="m-input-checkbox type01">
-										<input type="checkbox" id="agree2" name="agree2"  onChange={changeForm} checked={form.agree2 ? true : false}/>
+										<input type="checkbox" id="agree2" name="agree2" />
 											<label htmlFor="agree2">
 												<div className="circle">
 													<img src="/img/check-white.png" alt="" />
@@ -98,7 +103,7 @@ const DoctorRegister = ({login, history}) => {
 									<div className="mt-24"></div>
 
 									<div className="m-input-checkbox type01">
-										<input type="checkbox" id="agree3" onChange={changeForm} checked={form.agree3 ? true : false} />
+										<input type="checkbox" id="agree3" />
 											<label htmlFor="agree3">
 												<div className="circle">
 													<img src="/img/check-white.png" alt="" />
@@ -126,7 +131,7 @@ const DoctorRegister = ({login, history}) => {
 										<input type="text" placeholder="이름 입력" />
 									</div>
 
-									<p className="m-input-error">* 에러 메시지입니다.</p>
+									
 								</div>
 
 								<div className="m-input-wrap">
@@ -139,7 +144,7 @@ const DoctorRegister = ({login, history}) => {
 
 										<button type="button" className="m-input-btn m-btn type02">인증받기</button>
 									</div>
-									<p className="m-input-error">* 에러 메시지입니다.</p>
+									
 
 								</div>
 
@@ -153,7 +158,7 @@ const DoctorRegister = ({login, history}) => {
 
 										<button type="button" className="m-input-btn m-btn type02">인증하기</button>
 									</div>
-									<p className="m-input-error">* 에러 메시지입니다.</p>
+									
 
 								</div>
 
@@ -169,7 +174,7 @@ const DoctorRegister = ({login, history}) => {
 									</div>
 
 									<p className="m-input-comment">* 로그인 아이디로 사용됩니다.</p>
-									<p className="m-input-error">* 에러 메시지입니다.</p>
+									
 
 								</div>
 
@@ -188,7 +193,7 @@ const DoctorRegister = ({login, history}) => {
 										<input type="text" placeholder="새 비밀번호 확인" />
 									</div>
 
-									<p className="m-input-error">* 에러 메시지입니다.</p>
+									
 								</div>
 							</div>
 						</div>
@@ -246,7 +251,7 @@ const DoctorRegister = ({login, history}) => {
 										</div>
 									</div>
 
-									<p className="m-input-error">* 에러 메시지입니다.</p>
+									
 								</div>
 
 								<div className="m-input-wrap">
@@ -298,7 +303,7 @@ const DoctorRegister = ({login, history}) => {
 										</div>
 									</div>
 
-									<p className="m-input-error">* 에러 메시지입니다.</p>
+									
 								</div>
 
 								<div className="m-input-wrap">
@@ -317,7 +322,7 @@ const DoctorRegister = ({login, history}) => {
 										<img src="/img/면허증.png" alt="" />
 									</div>
 
-									<p className="m-input-error">* 에러 메시지입니다.</p>
+									
 
 								</div>
 							</div>
@@ -335,7 +340,7 @@ const DoctorRegister = ({login, history}) => {
 										<img src="/img/search3_24.png" alt="" className="m-input-text-deco" />
 									</div>
 
-									<p className="m-input-error">* 에러 메시지입니다.</p>
+									
 								</div>
 
 								<div className="m-input-wrap">
@@ -345,7 +350,7 @@ const DoctorRegister = ({login, history}) => {
 										<input type="text" placeholder="상세 주소 입력" />
 									</div>
 
-									<p className="m-input-error">* 에러 메시지입니다.</p>
+									
 
 								</div>
 
@@ -356,7 +361,7 @@ const DoctorRegister = ({login, history}) => {
 										<input type="text" placeholder="지역번호까지 함께 입력해 주세요." />
 									</div>
 
-									<p className="m-input-error">* 에러 메시지입니다.</p>
+									
 								</div>
 
 								<div className="m-input-wrap">
@@ -370,7 +375,7 @@ const DoctorRegister = ({login, history}) => {
 										<button type="button" className="m-input-btn m-btn type02">중복확인</button>
 									</div>
 
-									<p className="m-input-error">* 에러 메시지입니다.</p>
+									
 
 								</div>
 
@@ -385,7 +390,7 @@ const DoctorRegister = ({login, history}) => {
 										<button type="button" className="m-input-btn m-btn type02">파일 찾기</button>
 									</div>
 
-									<p className="m-input-error">* 에러 메시지입니다.</p>
+									
 								</div>
 
 								<div className="mt-80"></div>
@@ -394,6 +399,7 @@ const DoctorRegister = ({login, history}) => {
 							</div>
 						</div>
 					</div>
+
 				</form>
 
 

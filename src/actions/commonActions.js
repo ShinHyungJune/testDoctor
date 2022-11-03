@@ -55,10 +55,20 @@ export const setUser = (data) => {
 	}
 };
 
+
+export const setPop = (data) => {
+	return (dispatch) => {
+		dispatch({
+			type: "SET_POP",
+			payload: data
+		});
+	}
+};
+
 export const setFlash = (data) => {
 	return (dispatch) => {
 		dispatch({
-			type: SET_FLASH,
+			type: "SET_FLASH",
 			payload: data
 		})
 	}
