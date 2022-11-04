@@ -20,34 +20,34 @@ const Header = ({location, user, token, logout, ...rest}) => {
                         <img src="/img/logo.png" alt=""/>
                     </Link>
 
-                    {/*<div className="right">
+                    <div className="right">
                         <nav className="navs">
                             {
                                 user ? (
-                                     <Fragment>
-                                         <div className="nav">
-                                             <Link to="/notices" className="text">공지사항</Link>
-                                         </div>
+                                                <Fragment>
+                                                    {/*<div className="nav">*/}
+                                                    {/*    <Link to="/notices" className="text">공지사항</Link>*/}
+                                                    {/*</div>*/}
 
-                                         <div className="nav">
-                                             <Link to="/mypage" className="text">마이페이지</Link>
-                                         </div>
+                                                    {/*<div className="nav">*/}
+                                                    {/*    <Link to="/mypage" className="text">마이페이지</Link>*/}
+                                                    {/*</div>*/}
 
-                                         <div className="nav point">
-                                             <button className="text" onClick={logout}>로그아웃</button>
-                                         </div>
-                                     </Fragment>
+                                                    <div className="nav point">
+                                                        <button className="text" onClick={logout}>로그아웃</button>
+                                                    </div>
+                                                </Fragment>
                                         ) :
                                         (
-                                        <Fragment>
-                                            <div className="nav point">
-                                                <Link to="/login" className="text">로그인</Link>
-                                            </div>
-                                        </Fragment>
-                                )
+                                                <Fragment>
+                                                    <div className="nav point">
+                                                        <Link to="/login" className="text">로그인</Link>
+                                                    </div>
+                                                </Fragment>
+                                        )
                             }
                         </nav>
-                    </div>*/}
+                    </div>
                 </div>
             </div>
     );
